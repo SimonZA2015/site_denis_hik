@@ -1,0 +1,60 @@
+.contender {
+    width: 98%;
+    height: 80vmin;
+    position: absolute;
+    top: 120vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.body {
+    height: calc(90vh / 3);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.body img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.textBlock {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 100) 100%);
+    left: 0;
+    top: 0;
+}
+.textBlock h4 {
+    color: white;
+    position: center;
+}
+.textBlock span {
+    color: white;
+}
+
+@media (min-width: 650px) {
+    .contender {
+        flex-direction: row;
+    }
+
+    .body {
+        width: calc(100vmax / 3.2);
+        height: 200px;
+    }
+    
+}
+

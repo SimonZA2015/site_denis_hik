@@ -1,0 +1,25 @@
+.banner {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bottomStart {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 105vh;
+    z-index: inherit;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+}
+.bottomStart h1 {
+
+}
+
+.body {
+    width: 100%;
+    height: 200vh;
+    background-color: #f1f1f1;
+}

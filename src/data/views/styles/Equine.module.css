@@ -1,0 +1,26 @@
+.Banner {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bottomStart {
+    width: 100%;
+    position: absolute;
+    top: 99vh;
+    z-index: inherit;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+}
+.bottomStart h4 {
+    position: absolute;
+}
+
+.body {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    background: #f1f1f1;
+}
