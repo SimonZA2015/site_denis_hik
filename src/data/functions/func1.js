@@ -1,9 +1,9 @@
 import {generateGradient} from "./func2";
 import {
     listSpanEquineSlider,
-    listSpanProgrammingSlider,
+    listSpanProgrammingSlider, listSpanProjectSlider,
     listTitleEquineSlider,
-    listTitleProgramingSlider
+    listTitleProgramingSlider, listTitleProjectSlider
 } from "../config/text";
 import {listBgEquineSliders} from "../config/images";
 
@@ -58,4 +58,22 @@ const getListProg = () => {
     return listP;
 }
 
-export {getListProg, getListEquine, openUrl, getPCversion}
+const getListProj = () => {
+    let data;
+    let listProject = [];
+    for (let i = 0; i < 3; i++) {
+        let gradient = generateGradient();
+
+        data = {
+            name: listTitleProjectSlider[i],
+            des: listSpanProjectSlider[i],
+            gradient: gradient,
+        }
+
+        listProject.push(data)
+    }
+
+    return (listProject)
+}
+
+export {getListProj, getListProg, getListEquine, openUrl, getPCversion}

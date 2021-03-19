@@ -1,6 +1,6 @@
 .contender {
-    width: 98%;
-    height: 80vmin;
+    width: 100%;
+    height: content-box;
     position: absolute;
     top: 120vh;
     left: 0;
@@ -14,10 +14,10 @@
     border-radius: 10px;
     position: relative;
     margin-top: 5px;
+    margin-right: 5px;
     margin-left: 5px;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 .body img {
     width: 100%;
@@ -42,18 +42,32 @@
     color: white;
     position: center;
 }
+.textBlock div {
+    text-align: right;
+    padding: 5px;
+}
 .textBlock span {
     color: white;
 }
+.buttons {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+}
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
     .contender {
         flex-direction: row;
     }
 
     .body {
         width: calc(100vmax / 3.2);
-        height: 200px;
+        height: calc(90vh / 3);
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .textBlock div {
+        text-align: center;
     }
     
 }

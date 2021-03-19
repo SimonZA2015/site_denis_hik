@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from "./Button";
+
 import style from './styles/SliderEquine.module.css'
 
 const Slider = (props) => {
@@ -10,7 +12,8 @@ const Slider = (props) => {
                     {data.image && <img src={data.image} alt={''} /> }
                     <div className={style.textBlock}>
                         {data.name && <h4>{data.name}</h4>}
-                        {data.des && <span>{data.des}</span>}
+                        {data.des && <div><span>{data.des}</span></div>}
+                        {props.button && props.button.text[props.list.indexOf(data)] && <a target='example' href={props.button.url[props.list.indexOf(data)] }><Button className={style.buttons} pos={{position: 'absolute', left: '10px', bottom: '5px'}} image={props.button.image[props.list.indexOf(data)]} text={props.button.text[props.list.indexOf(data)]} /></a>}
                     </div>
                 </div>
             ))}

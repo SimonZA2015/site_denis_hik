@@ -12,7 +12,7 @@ const Equine = () => {
     return (
         <div>
             <div className={style.body} >
-                <div className={style.Banner} style={{backgroundImage: 'url(' + bgEquineUrl + ')'}} />
+                <div className={style.banner} style={{backgroundImage: 'url(' + bgEquineUrl + ')'}} />
                 <div className={style.bottomStart}><h1>Конная сфера</h1></div>
                 <Slider list={listEquine} />
             </div>

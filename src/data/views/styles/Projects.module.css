@@ -1,15 +1,7 @@
-.body {
-    width: 100%;
-    height: 200vh;
-    position: absolute;
-    background: #f1f1f1;
-}
-
 .banner {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .bottomStart {
@@ -23,4 +15,11 @@
 }
 .bottomStart h4 {
     position: absolute;
+}
+
+.body {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    background: #f1f1f1;
 }

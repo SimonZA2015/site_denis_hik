@@ -13,9 +13,8 @@ if (getPCversion()) {
     styleBg = style.backgroundPC;
 }
 
-const MenuPopup = ({closePopup, openEquine, openProg}) => {
+const MenuPopup = ({closePopup}) => {
 
-    let listFuncs = [openEquine,0, openProg,1, closePopup,2]
     let listUrls = ['/equine', '/programming', '/project']
 
     return (

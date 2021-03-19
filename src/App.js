@@ -9,7 +9,7 @@ import Header from "./data/component/Header";
 import AthorBlock from "./data/component/AthorBlock";
 import {Route} from "react-router-dom";
 import ProjectsView from "./data/views/Projects";
-import ErrorView from "./data/views/Error";
+// import ErrorView from "./data/views/Error";
 
 const App = () => {
 
@@ -30,7 +30,7 @@ const App = () => {
           <Route path='/equine' component={EquineView} />
           <Route path='/programming' component={ProgrammingView} />
           <Route path='/project' component={ProjectsView} />
-          {/*<Route exact path='/*' component={ErrorView} />*/}
+          {/*<Route exact path='*' component={ErrorView} />*/}
       </div>
         {popupMenu}
         <AthorBlock />
