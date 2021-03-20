@@ -4,10 +4,9 @@ import {getListProj} from "../functions/func1";
 
 import {bgProjUrl} from "../config/images";
 import style from './styles/Projects.module.css'
-import {listButtonsProjectSlider} from "../config/text";
+import Button from "../component/Button";
 
 let list = getListProj();
-let Buttons = listButtonsProjectSlider;
 
 const ProjectsView = () => {
 
@@ -15,8 +14,8 @@ const ProjectsView = () => {
         <div>
             <div className={style.body} >
                 <div className={style.banner} style={{backgroundImage: 'url(' + bgProjUrl + ')'}} />
-                <div className={style.bottomStart} ><h1>Проекты</h1></div>
-                <Slider list={list} button={Buttons} />
+                <div className={style.bottomStart} ><h1>Проекты</h1><Button className={style.bottomStartButton} url='https://github.com/SimonZA2015/' text='Git hub' /></div>
+                <Slider list={list} />
             </div>
         </div>
     )

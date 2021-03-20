@@ -4,10 +4,10 @@ import style from './styles/Button.module.css'
 
 const Button = (props) => {
 
-    return (<div className={style.body} style={props.pos} >
+    return (<a target='example' href={props.url}><div className={style.body + ' ' + props.className} style={props.pos} >
         {props.image && <div style={{backgroundImage: 'url(' + props.image + ')'}} />}
         <h4>{props.text}</h4>
-    </div>)
+    </div></a>)
 }
 
 export default Button;
