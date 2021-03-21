@@ -1,5 +1,6 @@
 import {generateGradient} from "./func2";
 import {
+    listImageProjectSlider,
     listSpanEquineSlider,
     listSpanProgrammingSlider, listSpanProjectSlider,
     listTitleEquineSlider,
@@ -44,6 +45,7 @@ const getListProg = () => {
     let data;
     let listP = [];
     for (let i = 0; i < 3; i++) {
+
         let gradient = generateGradient();
 
         data = {
@@ -62,11 +64,21 @@ const getListProj = () => {
     let data;
     let listProject = [];
     for (let i = 0; i < 3; i++) {
-        let gradient = generateGradient();
+
+        let gradient = '#f1f1f1';
+
+
+        if (listTitleProjectSlider[i] !== '') {
+
+            gradient = generateGradient();
+
+        }
+
 
         data = {
             name: listTitleProjectSlider[i],
             des: listSpanProjectSlider[i],
+            image: listImageProjectSlider[i],
             gradient: gradient,
         }
 
