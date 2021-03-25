@@ -17,7 +17,6 @@
 
 .body {
     width: 4fr;
-    height: 40%;
     padding: 5px;
     background-color: #f1f1f1;
     border-radius: 10px;
@@ -25,6 +24,14 @@
     right: 10px;
     top: 10px;
 }
+
+.nav {
+    text-decoration: none;
+}
+.nav.active {
+    text-decoration: underline;
+}
+
 .body h4 {
     color: black;
     text-decoration: none;

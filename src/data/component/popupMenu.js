@@ -23,7 +23,7 @@ const MenuPopup = ({closePopup}) => {
                 {listName.map((name, i) => {
 
                     return (
-                        <NavLink to={listUrls[i]}><h4 className={style} id={name} >{name}</h4></NavLink>
+                        <NavLink className={style.nav}  to={listUrls[i]}><h4 className={style} id={name} >{name}</h4></NavLink>
                     )
                 })}
                 <div className={style.bodyImagesUrls}>
