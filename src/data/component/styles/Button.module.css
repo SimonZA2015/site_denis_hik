@@ -6,7 +6,6 @@
     background-color: #374690;
     grid-template-columns: 3fr 10fr;
     border-radius: 50px;
-    text-align: center;
 }
 .body div {
     height: 100%;

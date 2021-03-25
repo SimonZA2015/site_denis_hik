@@ -14,7 +14,7 @@ const ProjectsView = () => {
         <div>
             <div className={style.body} >
                 <div className={style.banner} style={{backgroundImage: 'url(' + bgProjUrl + ')'}} />
-                <div className={style.bottomStart} ><h1>Проекты</h1><Button className={style.bottomStartButton} url='https://github.com/SimonZA2015/' text='Git hub' /></div>
+                <div className={style.bottomStart} ><h1>Проекты</h1><div className={style.blockButtons}><div /><Button className={style.bottomStartButton} url='https://github.com/SimonZA2015/' text='Git hub' /></div></div>
                 <Slider list={list} />
             </div>
         </div>
