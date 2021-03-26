@@ -9,6 +9,7 @@ import Header from "./data/component/Header";
 import AthorBlock from "./data/component/AthorBlock";
 import {Route} from "react-router-dom";
 import ProjectsView from "./data/views/Projects";
+import BottomNavBar from "./data/component/BottomNavBar";
 // import ErrorView from "./data/views/Error";
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           {/*<Route exact path='*' component={ErrorView} />*/}
       </div>
         {popupMenu}
+        <BottomNavBar />
         <AthorBlock />
     </div>
   );

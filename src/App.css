@@ -8,6 +8,7 @@
 }
 
 .menuHeader {
+  visibility: hidden;
   position: absolute;
   right: 5px ;
   align-content: center;
@@ -32,6 +33,20 @@
   color: white;
 }
 
+.NavBar {
+  visibility: visible;
+}
+
+
 .App-link {
   color: #61dafb;
+}
+
+@media (min-width: 650px) {
+  .menuHeader {
+    visibility: visible;
+  }
+  .NavBar {
+    visibility: hidden;
+  }
 }
