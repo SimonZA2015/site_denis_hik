@@ -1,12 +1,14 @@
 import React from 'react';
 import {Slider} from "../component/Slider";
 import {getListProj} from "../functions/func1";
-
-import {bgProjUrl} from "../config/images";
-import style from './styles/Projects.module.css'
 import Button from "../component/Button";
+    import {bgProjUrl} from "../config/images";
+    import {listButtonsProjectSlider} from "../config/text";
+
+import style from './styles/Projects.module.css'
 
 let list = getListProj();
+let button = listButtonsProjectSlider
 
 const ProjectsView = () => {
 
@@ -15,7 +17,7 @@ const ProjectsView = () => {
             <div className={style.body} >
                 <div className={style.banner} style={{backgroundImage: 'url(' + bgProjUrl + ')'}} />
                 <div className={style.bottomStart} ><h1>Проекты</h1><div className={style.blockButtons}><div /><Button className={style.bottomStartButton} url='https://github.com/SimonZA2015/' text='Git hub' /></div></div>
-                <Slider list={list} />
+                <Slider button={button} list={list} />
             </div>
         </div>
     )

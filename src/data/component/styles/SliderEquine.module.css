@@ -42,9 +42,11 @@
     color: white;
     position: center;
 }
-.textBlock div {
+.textBlock div1 {
     text-align: right;
-    padding: 5px;
+}
+.textBlock div2 {
+
 }
 .textBlock span {
     color: white;

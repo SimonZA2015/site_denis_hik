@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import MenuPopup from "./data/component/popupMenu";
 import HomeView from "./data/views/Home";
-
-import './App.css';
 import EquineView from "./data/views/Equine";
 import ProgrammingView from "./data/views/Programming";
 import Header from "./data/component/Header";
@@ -10,6 +8,8 @@ import AthorBlock from "./data/component/AthorBlock";
 import {Route} from "react-router-dom";
 import ProjectsView from "./data/views/Projects";
 import BottomNavBar from "./data/component/BottomNavBar";
+
+import './App.css';
 // import ErrorView from "./data/views/Error";
 
 const App = () => {
