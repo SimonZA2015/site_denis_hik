@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './styles/Home.module.css';
-import {bgHomeUrl} from "../config/images";
+import bgHomeUrl from "../media/bgHome.jpg";
 import {getPCversion} from "../functions/func1";
 
 

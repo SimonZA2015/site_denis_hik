@@ -1,7 +1,7 @@
 import React from 'react';
 
 import style from './styles/Programming.module.css';
-import {bgProgUrl} from "../config/images";
+import bgProgUrl from "../media/bgProg.jpg";
 import {Slider} from "../component/Slider";
 import {getListProg} from "../functions/func1";
 

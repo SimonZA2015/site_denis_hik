@@ -1,6 +1,6 @@
 import React from 'react';
 import {Slider} from "../component/Slider";
-import {bgEquineUrl} from "../config/images";
+import bgEquineUrl from "../media/bgEquine.jpg";
 
 import style from './styles/Equine.module.css';
 import {getListEquine} from "../functions/func1";
