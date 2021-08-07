@@ -7,7 +7,8 @@ let instaImageUrl = 'https://w7.pngwing.com/pngs/623/523/png-transparent-instagr
 let bgHomeUrl = 'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/ijt4igw1ft4-800x1200.jpeg';
 let bgEquineUrl = 'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/xaspejrjzf4-1600x1067.jpg';
 let bgProgUrl = 'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/img-20200829-75151-1643x924.jpg';
-let bgProjUrl = ''
+let bgProjUrl = 'https://lh3.googleusercontent.com/fife/AAWUweUw30hQsg5BPKoXL7EdEOffYln67kbzOptgCM73w_FJ1avy4-L6OdhZfVzoOsrXj-H5f5AGJ_HpS91EXuOnj5miu1e5yg4_k3tC7Ap4uUfegI8_fEJINpIgvIkP-mD_vcSa-0v-LewNB8zqWe2tJ6s1WXCrbCsZmiyy9IqQEj5mW5ZRd8UEBuB_4_qqUtVj4WAu15TK_ojv8vpUivXX2dDFt2iSSSCJNE4x_X-_EvSq1cOXyQkzs5JuJJRUkqWezQdvyGVD444NolX2LyoUuE0W4sfQdDYxDwg83QrXOOKGl7J8N_LrquXThEpRmF5qnELJENtwU7djKQIfoVLoig0al6a_ix_7u273T5csghV_vvtkPv4VBfuV1y6N5zoGp7lcfnhYLqUfxvdoQ3GwxqsLRbwMlgGFS8AsMqYjQkjF2lxkjjhG4H3ik37BZcjlsPhv_q1Q_55sTx5oI_BT-TjIySj-KCht1MrNcyRNp1rJEkl5CrhFfNLeAGrOvvYOmjM5c0jPnF93EzuyTI5EdB9vGWgboPX3b9gIKiXcEhisUdM2Ak45WHc1zye9HorgUjVrAIOBhRFVHk2hTpvoOHBFln4i-1Y0cKZQsIRXlBd0inTYxjJs_eheb8fOpNRtLt5VsIiIkIz99gPl0t_PlDAUYs3mDGLH7oxNOr3gXNGxrAvKq19ST3MBhAM1h8J4gkCG0Zllx1tTp2R-oGtQQO-gSbniZTPqin0=w1920-h947-ft'
+let bgProjSlider = 'https://lh3.googleusercontent.com/fife/AAWUweVr3FC8OP8Y2UUO3pTVCTRvVRxAY1NY8e5RiBOGpeRPJ2P1PofQweEW08H7RSZYDiMazz7B59vKD6n2EB1zDdzS2pXPjoWZuuZo0JKn8NZenvannvfJ9n7JBSCWf_ENL_I6IgPmq4_uZVbGEhwo2nvBGBC7PZG4kcmq2g-g1KOcRWGU_UG0iVK0Kaov9eFDBYkJTbGVeIqTyBLWRsydehuXRtLVNgS94ZooMeQvkxMQe0zFivIZr_ew5UQwzExN8k32k9XpS6L6XpWP1M6Sa3f4O3xIxsV9qjZYh_txCgRhUySdFjuhiCB5g2FiTUJRkE0RmRO1x5NuD_HUlDqDjkt8ZUhzuz3QXUKN_R-ES_rO1fZr4kztc3n7ZVGd5jVos_Iqdr3mqjRE5y-rKVbJnkiZuVIUWprOVosYC6UTyBURbYXiq31_WfM3XlsutZJclqAfv3_9z20k68TDZnD3VqyDqsv0wNbCIEVwwIHP-hGNlKLkXym12025a8PTtFP4TzivjHu6saQaLB_07p_OBTmwIMgKz6XMIRJv_UM-IzRICO66ryrz4I1DDRkrS733eDiUQFuqUBObL73t7xtJb-yC-9G8t_wgUoTAw7-2JNyDox5-YmbLNNx8zre3EPwxQ4DeJhAWg4y-I5pyP9sNzEpiFcUDC8Fp0zKk7LJMG9rMh1ufrKogimlb36ramhleHmGrSPgDNsrD7UXaNZ_gn_xcuo-ZiKUsMQ=w1920-h913-ft'
 let listBgEquineSliders = ['https://lh3.google.com/pw/AM-JKLVaPCZoQjumN94gHuCN3AOhMMGDgZAqN4rfJRq1eII_fkAHwlME4nceVZSEIK6vzrHy7v759K2doxQMM3pPcCnMB6ye_eo=w322-h429-no?authuser=0',
     'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/s1200.webp',
     'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/photo-2020-12-21-17-02-29-540x1080.jpeg',
@@ -18,4 +19,4 @@ let navbar = {
     ids: [0,1,2],
 };
 
-export {navbar,playImageUrl, listBgEquineSliders, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, vkImageUrl};
+export {bgProjSlider, navbar, playImageUrl, listBgEquineSliders, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, vkImageUrl};
