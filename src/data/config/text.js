@@ -7,8 +7,8 @@ let listSpanEquineSlider = ['Диплом о профиссиональном о
 let listTitleProgramingSlider = ['Знаю зыки программинга', 'Frontend-разрабочик', 'Красивый код'];
 let listSpanProgrammingSlider = ['Пишу на языках: Java(Android apps), Python, Java-Script(React)', 'Хочу стать профессиональным Frontend-разработчиком', 'Придерживаюсь красивого и понятного кода' ];
 
-let listTitleProjectSlider = ['Horse Book', 'ЧК Ворон', ''];
-let listSpanProjectSlider = ['Нацеленно на обьеденение услуг для лошадей в одном приложении',];
+let listTitleProjectSlider = ['Horse Book', 'ЧК Ворон', '' ];
+let listSpanProjectSlider = ['Нацеленно на обьеденение услуг для лошадей в одном приложении', 'Сайт конюшни ЧК Ворон'];
 let listImageProjectSlider = [hbImage, bgProjSlider]
 
 let listButtonsProjectSlider = {

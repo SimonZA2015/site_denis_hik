@@ -14,6 +14,12 @@
   align-content: center;
 }
 
+.donatHeader {
+  position: absolute;
+  right: 5px ;
+  align-content: center;
+}
+
 .App {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -46,6 +52,11 @@
   .menuHeader {
     visibility: visible;
   }
+
+  .donatHeader {
+    visibility: hidden;
+  }
+
   .NavBar {
     visibility: hidden;
   }

@@ -1,10 +1,10 @@
 import React from 'react';
 import {getPCversion, openUrl} from "../functions/func1";
-import {gitUrl, instaUrl, vkUrl} from "../config/urls";
+import {donatUrl, gitUrl, instaUrl, vkUrl} from "../config/urls";
 import {NavLink} from "react-router-dom";
 
 import style from './styles/popupMenu.module.css';
-import {gitImageUrl, instaImageUrl, vkImageUrl} from "../config/images";
+import {donatMenu, gitImageUrl, instaImageUrl, vkImageUrl} from "../config/images";
 
 let listName = ['Конный спорт', 'Программирование', 'Проекты'];
 let styleBg = style.background;
@@ -30,6 +30,7 @@ const MenuPopup = ({closePopup}) => {
                     <img src={gitImageUrl} height={'100%'} alt={'gitHub'} onClick={() => openUrl(gitUrl)} />
                     <img src={vkImageUrl} height={'100%'} alt={'VK'} onClick={() => openUrl(vkUrl)} />
                     <img src={instaImageUrl} height={'100%'} alt={'Insta'} onClick={() => openUrl(instaUrl)} />
+                    <img src={donatMenu} height={'100%'} alt={'Donat'} onClick={() => openUrl(donatUrl)} />
                 </div>
             </div>
         </div>

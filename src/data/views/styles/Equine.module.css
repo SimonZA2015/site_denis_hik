@@ -14,7 +14,25 @@
     background-color: #fff;
 }
 .bottomStart h4 {
+    width: 100%;
+    color: white;
+}
+
+.blockButtons {
+    width: 100%;
+    height: 30%;
     position: absolute;
+    top: 85%;
+    left: 0;
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+}
+
+.bottomStartButton {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    grid-template-columns: 0 1fr;
 }
 
 .body {
