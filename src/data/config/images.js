@@ -32,4 +32,5 @@ let navbar = {
     ids: [0,1,2],
 };
 
+
 export {bgProjSlider, navbar, playImageUrl, donatMenu, listBgEquineSliders, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, vkImageUrl};

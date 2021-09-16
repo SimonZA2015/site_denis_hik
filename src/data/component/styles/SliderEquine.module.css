@@ -5,6 +5,8 @@
     top: 120vh;
     left: 0;
     display: flex;
+    justify-content: inherit;
+    align-items: inherit;
     flex-direction: column;
 
 }
@@ -60,6 +62,8 @@
 @media (min-width: 700px) {
     .contender {
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .body {

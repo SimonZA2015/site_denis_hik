@@ -13,7 +13,10 @@ if (getPCversion()) {
 const HomeView = () => {
 
     return (
-        <div className={style.body} style={{backgroundImage: 'url(' + bgHomeUrl + ')', height: heightBanner.height}} />
+        <div
+            className={style.body}
+            style={{backgroundImage: 'url(' + bgHomeUrl + ')', height: heightBanner.height}}
+        />
     )
 }
 

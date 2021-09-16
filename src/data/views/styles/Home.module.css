@@ -4,3 +4,22 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+
+@media (min-width: 900px) {
+    .body {
+        background-position-y: 20%;
+        animation: animatedBackground 40s linear infinite;
+    }
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: top
+    }
+    50% {
+        background-position: center
+    }
+    100% {
+        background-position: top
+    }
+}

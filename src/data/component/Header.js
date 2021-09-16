@@ -2,13 +2,13 @@ import React from "react";
 import logoMenu from "../media/logo.ico";
 import menuImage from "../media/menu.png";
 import {Link} from "react-router-dom";
-import {getPCversion} from "../functions/func1";
+// import {getPCversion} from "../functions/func1";
 import {donatMenu} from "../config/images";
 import {donatUrl} from "../config/urls";
 
 const Header = ({openPop, openHome}) => {
 
-    let pc = getPCversion()
+    // let pc = getPCversion()
 
     function onClickDonat(data) {
         window.location.href = donatUrl;
