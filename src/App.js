@@ -17,6 +17,9 @@ import './App.css';
 const App = () => {
 
     const [popupMenu, setPopupMenu] = useState(false);
+    const [navBar, setNavBar]= useState(true);
+    const [xS, setxS] = useState(0);
+    let top = 0;
 
     function openPop() {
         function closePop() {
@@ -26,8 +29,23 @@ const App = () => {
         setPopupMenu(<MenuPopup closePopup={closePop}/>)
     }
 
+    function onChangeScroll(topS) {
+        if (top < topS) {
+            setNavBar(false);
+        }else {
+            setNavBar(true);
+        }
+        top = topS;
+    }
+
     return (
-        <Scrollbars style={{width: '100vw', height: '100vh'}}>
+        <Scrollbars
+            style={{width: '100vw', height: '100vh'}}
+            onScrollFrame={(e) => setxS(e.scrollTop)}
+            onScrollStart={() => onChangeScroll(xS)}
+            onScrollStop={() => onChangeScroll(xS)}
+
+        >
             <div className="App">
                 <Header openPop={openPop}/>
                 <div>
@@ -39,7 +57,7 @@ const App = () => {
                     <Redirect to={'/'}/>
                 </div>
                 {popupMenu}
-                <BottomNavBar/>
+                {navBar ? <BottomNavBar/> : ''}
                 <AthorBlock/>
             </div>
         </Scrollbars>
