@@ -1,30 +1,31 @@
-import {generateGradient} from "./func2";
+import {generateGradient} from "./other_funcs";
 import {
     listImageProjectSlider,
     listSpanEquineSlider,
     listSpanProgrammingSlider, listSpanProjectSlider,
     listTitleEquineSlider,
     listTitleProgramingSlider, listTitleProjectSlider
-} from "../config/text";
-import {listBgEquineSliders} from "../config/images";
+} from "../configs/text";
+import {listBgEquineSliders} from "../configs/images";
 
 
 const getPCversion = () => {
-
+    //preparation display width & height
     let h = document.body.clientHeight;
     let w = document.body.clientWidth;
-    
+
     return h < w;
 }
 
 const openUrl = (url) => {
-
+    //open new tab url
     window.open(url,"_blank")
 }
 
 const getListEquine = () => {
     let data;
     let listV = [];
+
     for (let i = 0; i < 3; i++) {
         let gradient = generateGradient();
 

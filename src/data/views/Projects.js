@@ -1,10 +1,10 @@
 import React from 'react';
-import {Slider} from "../component/Slider";
-import {getListProj} from "../functions/func1";
-import Button from "../component/Button";
-import {bgProjUrl} from "../config/images";
-import {listButtonsProjectSlider} from "../config/text";
-import {gitUrl} from "../config/urls";
+import {Slider} from "../components/SliderBlock/Slider";
+import {getListProj} from "../functions/gets_funcs";
+import Button from "../components/ButtonBlock/Button";
+import {bgProjUrl} from "../configs/images";
+import {listButtonsProjectSlider} from "../configs/text";
+import {gitUrl} from "../configs/urls";
 
 import style from './styles/Projects.module.css';
 

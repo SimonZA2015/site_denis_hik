@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from "./Button";
+import Button from "../ButtonBlock/Button";
 
-import style from './styles/SliderEquine.module.css'
+import style from './SliderEquine.module.css'
 
 const Slider = (props) => {
 

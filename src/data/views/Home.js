@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './styles/Home.module.css';
 import bgHomeUrl from "../media/bgHome.jpg";
-import {getPCversion} from "../functions/func1";
+import {getPCversion} from "../functions/gets_funcs";
 
 
 let heightBanner = {height: '150vh'};

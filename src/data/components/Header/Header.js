@@ -1,10 +1,10 @@
 import React from "react";
-import logoMenu from "../media/logo.ico";
-import menuImage from "../media/menu.png";
+import logoMenu from "../../media/logo.ico";
+import menuImage from "../../media/menu.png";
 import {Link} from "react-router-dom";
 // import {getPCversion} from "../functions/func1";
-import {donatMenu} from "../config/images";
-import {donatUrl} from "../config/urls";
+import {donatMenu} from "../../configs/images";
+import {donatUrl} from "../../configs/urls";
 
 const Header = ({openPop, openHome}) => {
 

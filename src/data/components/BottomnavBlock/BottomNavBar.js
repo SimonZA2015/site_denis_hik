@@ -1,11 +1,11 @@
 import React from 'react';
-import {navbar} from "../config/images";
+import {navbar} from "../../configs/images";
 import {NavLink} from "react-router-dom";
-import nav0 from '../media/nav0.png';
-import nav1 from '../media/nav1.png';
-import nav2 from '../media/nav2.png';
+import nav0 from '../../media/nav0.png';
+import nav1 from '../../media/nav1.png';
+import nav2 from '../../media/nav2.png';
 
-import style from './styles/BottomNavBar.module.css';
+import style from './BottomNavBar.module.css';
 
 const BottomNavBar = (props) => {
 

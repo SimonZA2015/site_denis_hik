@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import MenuPopup from "./data/component/popupMenu";
+import MenuPopup from "./data/components/Popout/popupMenu";
 import HomeView from "./data/views/Home";
 import EquineView from "./data/views/Equine";
 import ProgrammingView from "./data/views/Programming";
-import Header from "./data/component/Header";
-import AthorBlock from "./data/component/AthorBlock";
+import Header from "./data/components/Header/Header";
+import AthorBlock from "./data/components/AthorBlock/AthorBlock";
 import {Redirect, Route} from "react-router-dom";
 import ProjectsView from "./data/views/Projects";
-import BottomNavBar from "./data/component/BottomNavBar";
+import BottomNavBar from "./data/components/BottomnavBlock/BottomNavBar";
 import { Scrollbars } from 'react-custom-scrollbars';
 
 
@@ -30,9 +30,12 @@ const App = () => {
     }
 
     function onChangeScroll(topS) {
+        //чекается когда меняется скролл
         if (top < topS) {
+            //прячет навбар
             setNavBar(false);
         }else {
+            //наоборот
             setNavBar(true);
         }
         top = topS;
@@ -41,10 +44,13 @@ const App = () => {
     return (
         <Scrollbars
             style={{width: '100vw', height: '100vh'}}
-            onScrollFrame={(e) => setxS(e.scrollTop)}
+            onScrollFrame={(e) => {
+                setxS(e.scrollTop);
+                // console.log(xS);
+            }}
             onScrollStart={() => onChangeScroll(xS)}
             onScrollStop={() => onChangeScroll(xS)}
-
+            onUpdate={console.log}
         >
             <div className="App">
                 <Header openPop={openPop}/>
@@ -53,7 +59,7 @@ const App = () => {
                     <Route path='/equine' component={EquineView}/>
                     <Route path='/programming' component={ProgrammingView}/>
                     <Route path='/project' component={ProjectsView}/>
-                    {/*<Route exact path='*' component={ErrorView} />*/}
+                    {/*<Route exact path='*' components={ErrorView} />*/}
                     <Redirect to={'/'}/>
                 </div>
                 {popupMenu}

@@ -1,10 +1,10 @@
 import React from 'react';
-import {getPCversion, openUrl} from "../functions/func1";
-import {donatUrl, gitUrl, instaUrl, vkUrl} from "../config/urls";
+import {getPCversion, openUrl} from "../../functions/gets_funcs";
+import {donatUrl, gitUrl, instaUrl, vkUrl} from "../../configs/urls";
 import {NavLink} from "react-router-dom";
 
-import style from './styles/popupMenu.module.css';
-import {donatMenu, gitImageUrl, instaImageUrl, vkImageUrl} from "../config/images";
+import style from './popupMenu.module.css';
+import {donatMenu, gitImageUrl, instaImageUrl, vkImageUrl} from "../../configs/images";
 
 let listName = ['Конный спорт', 'Программирование', 'Проекты'];
 let styleBg = style.background;

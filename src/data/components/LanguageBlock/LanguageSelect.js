@@ -1,7 +1,7 @@
 import React from 'react';
 
-import style from './styles/LanguageSelect.module.css'
-import {langENGImage, langRUSImage} from "../config/images";
+import style from './LanguageSelect.module.css'
+import {langENGImage, langRUSImage} from "../../configs/images";
 
 const LanguageSelect = ({onClose}) => {
 
