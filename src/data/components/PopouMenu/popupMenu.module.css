@@ -16,7 +16,11 @@
 }
 
 .body {
-    width: 4fr;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 20vw;
+    height: 30vh;
     padding: 5px;
     background-color: #f1f1f1;
     border-radius: 10px;
@@ -27,6 +31,10 @@
 
 .nav {
     text-decoration: none;
+    background: #dad9d9;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    height: calc(100% / 4);
 }
 .nav.active {
     text-decoration: underline;
@@ -45,5 +53,17 @@
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+    .background {
+        visibility: hidden;
+    }
+    .backgroundPC {
+        visibility: hidden;
+    }
+    .body {
+        visibility: hidden;
+    }
 }

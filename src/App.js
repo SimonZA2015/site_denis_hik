@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import MenuPopup from "./data/components/Popout/popupMenu";
+import MenuPopup from "./data/components/PopouMenu/popupMenu";
 import HomeView from "./data/views/Home";
 import EquineView from "./data/views/Equine";
 import ProgrammingView from "./data/views/Programming";
