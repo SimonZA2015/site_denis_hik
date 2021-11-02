@@ -3,23 +3,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    background-image: url("/src/data/media/bgHome.jpg");
 }
 
-@media (min-width: 900px) {
+@media (min-width: 650px) {
     .body {
-        background-position-y: 20%;
-        animation: animatedBackground 40s linear infinite;
-    }
-}
-
-@keyframes animatedBackground {
-    0% {
-        background-position: top
-    }
-    50% {
-        background-position: center
-    }
-    100% {
-        background-position: top
+        background-image: url("/src/data/media/bgHomePC.jpg");
     }
 }
