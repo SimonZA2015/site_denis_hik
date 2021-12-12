@@ -30,7 +30,7 @@ const MenuPopup = ({closePopup}) => {
                     <img src={gitImageUrl} height={'100%'} alt={'gitHub'} onClick={() => openUrl(gitUrl)} />
                     <img src={vkImageUrl} height={'100%'} alt={'VK'} onClick={() => openUrl(vkUrl)} />
                     <img src={instaImageUrl} height={'100%'} alt={'Insta'} onClick={() => openUrl(instaUrl)} />
-                    <img src={donatMenu} height={'100%'} alt={'Donat'} onClick={() => openUrl(donatUrl)} />
+                    {/*<img src={donatMenu} height={'100%'} alt={'Donat'} onClick={() => openUrl(donatUrl)} />*/}
                 </div>
             </div>
         </div>

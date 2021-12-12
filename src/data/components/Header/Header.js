@@ -19,7 +19,7 @@ const Header = ({openPop, openHome}) => {
             <Link className={'logoHeader'} to='/' ><img src={logoMenu} height={40} alt={'logo header'} /></Link>
             <h4>Denis Hik</h4>
             <img className={'menuHeader'} src={menuImage} height={40} alt={'menu'} onClick={openPop} />
-            <img className={'donatHeader'} src={donatMenu} height={40} alt={'donat'} onClick={onClickDonat} />
+            {/*<img className={'donatHeader'} src={donatMenu} height={40} alt={'donat'} onClick={onClickDonat} />*/}
         </header>
     )
 }

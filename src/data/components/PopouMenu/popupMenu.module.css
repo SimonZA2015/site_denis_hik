@@ -34,7 +34,7 @@
     background: #dad9d9;
     border-radius: 20px;
     margin-bottom: 5px;
-    height: calc(100% / 4);
+    height: calc(100% / 3);
 }
 .nav.active {
     text-decoration: underline;
