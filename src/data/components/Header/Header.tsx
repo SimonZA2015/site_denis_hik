@@ -1,18 +1,15 @@
-import React from "react";
-import logoMenu from "../../media/logo.ico";
+import React, {MouseEventHandler} from "react";
 import menuImage from "../../media/menu.png";
 import {Link} from "react-router-dom";
-// import {getPCversion} from "../functions/func1";
-import {donatMenu} from "../../configs/images";
-import {donatUrl} from "../../configs/urls";
+import logoMenu from '../../media/logo.png'
 
-const Header = ({openPop, openHome}) => {
+interface propsI {
+    openPop: MouseEventHandler,
+}
+
+const Header = ({openPop}:propsI) => {
 
     // let pc = getPCversion()
-
-    function onClickDonat(data) {
-        window.location.href = donatUrl;
-    }
 
     return (
         <header className="App-header">

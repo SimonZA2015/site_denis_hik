@@ -3,7 +3,7 @@ import {headerHomeText} from "../../configs/text";
 
 import style from './TitleHomeBlock.module.css';
 
-const TitleHomeBlock = (props) => {
+const TitleHomeBlock = ():JSX.Element => {
 
     return (
         <div className={style.body}>

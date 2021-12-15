@@ -1,13 +1,31 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import Button from "../ButtonBlock/Button";
 
 import style from './SliderEquine.module.css'
 
-const Slider = (props) => {
+interface dataI {
+    button: any;
+    name: string,
+    des: string,
+    image: string,
+    gradient: string,
+    
+}
+
+interface propsI {
+    button: {
+        text: string[],
+        url: string[],
+        image: string[],
+    } | null
+    list: Array<any>
+}
+
+const Slider = (props:propsI) => {
 
     return (
         <div className={style.contender}>
-            {props.list && props.list.map((data) => (
+            {props.list && props.list.map((data:dataI) => (
                 <div className={style.body} style={{background: data.gradient}}>
                     {data.image && <img src={data.image} alt={''}/>}
                     {data.name && <div className={style.textBlock}>
@@ -24,6 +42,6 @@ const Slider = (props) => {
             ))}
         </div>
     )
-}
+};
 
 export {Slider};

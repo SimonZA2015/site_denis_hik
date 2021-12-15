@@ -1,21 +1,25 @@
-import React from 'react';
+import {MouseEventHandler} from 'react';
 import {getPCversion, openUrl} from "../../functions/gets_funcs";
-import {donatUrl, gitUrl, instaUrl, vkUrl} from "../../configs/urls";
+import {gitUrl, instaUrl, vkUrl} from "../../configs/urls";
 import {NavLink} from "react-router-dom";
 
 import style from './popupMenu.module.css';
-import {donatMenu, gitImageUrl, instaImageUrl, vkImageUrl} from "../../configs/images";
+import {gitImageUrl, instaImageUrl, vkImageUrl} from "../../configs/images";
 
-let listName = ['Конный спорт', 'Программирование', 'Проекты'];
-let styleBg = style.background;
+interface propsI {
+    closePopup: MouseEventHandler
+}
+
+let listName: Array<string> = ['Конный спорт', 'Программирование', 'Проекты'];
+let styleBg: string = style.background;
 
 if (getPCversion()) {
     styleBg = style.backgroundPC;
 }
 
-const MenuPopup = ({closePopup}) => {
+const MenuPopup = ({closePopup}:propsI):JSX.Element => {
 
-    let listUrls = ['/equine', '/programming', '/project']
+    let listUrls: Array<string> = ['/equine', '/programming', '/project']
 
     return (
         <div className={styleBg} onClick={closePopup} >
@@ -23,7 +27,7 @@ const MenuPopup = ({closePopup}) => {
                 {listName.map((name, i) => {
 
                     return (
-                        <NavLink className={style.nav}  to={listUrls[i]}><h4 className={style} id={name} >{name}</h4></NavLink>
+                        <NavLink className={style.nav}  to={listUrls[i]}><h4 id={name} >{name}</h4></NavLink>
                     )
                 })}
                 <div className={style.bodyImagesUrls}>

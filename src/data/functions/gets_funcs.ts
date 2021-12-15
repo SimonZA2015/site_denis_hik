@@ -11,20 +11,20 @@ import {listBgEquineSliders} from "../configs/images";
 
 const getPCversion = () => {
     //preparation display width & height
-    let h = document.body.clientHeight;
-    let w = document.body.clientWidth;
+    let h:number = document.body.clientHeight;
+    let w:number = document.body.clientWidth;
 
     return h < w;
 }
 
-const openUrl = (url) => {
+const openUrl = (url: string) => {
     //open new tab url
     window.open(url,"_blank")
 }
 
-const getListEquine = () => {
-    let data;
-    let listV = [];
+const getListEquine = ():Array<any> => {
+    let data:{name: string, des: string, image: string, gradient: string} ;
+    let listV:Array<{name: string, des: string, image: string, gradient: string}> = [];
 
     for (let i = 0; i < 3; i++) {
         let gradient = generateGradient();
@@ -43,8 +43,8 @@ const getListEquine = () => {
 }
 
 const getListProg = () => {
-    let data;
-    let listP = [];
+    let data:{name: string, des: string, gradient: string} ;
+    let listP:Array<{name: string, des: string, gradient: string}>  = [];
     for (let i = 0; i < 3; i++) {
 
         let gradient = generateGradient();
@@ -62,8 +62,8 @@ const getListProg = () => {
 }
 
 const getListProj = () => {
-    let data;
-    let listProject = [];
+    let data:{name: string, des: string, image: string | boolean, gradient: string} ;
+    let listProject:Array<{name: string, des: string, image: string | boolean, gradient: string}>  = [];
     for (let i = 0; i < 3; i++) {
 
         let gradient = '#f1f1f1';

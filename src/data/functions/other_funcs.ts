@@ -1,4 +1,4 @@
-function disableBodyScroll({savePosition = false} = {}) {
+function disableBodyScroll({savePosition = false} = {}):void {
     //disable scroll
     if (document.readyState === 'complete') {
         if (document.body.scrollHeight > window.innerHeight) {
@@ -11,11 +11,11 @@ function disableBodyScroll({savePosition = false} = {}) {
     }
 }
 
-function generateGradient() {
+function generateGradient():string {
     //create array
     let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e"];
 
-    function populate(a) {
+    function populate(a:string) {
         //create gradient color
         for (let i = 0; i < 6; i++) {
             let x = Math.round(Math.random() * 14);
@@ -29,7 +29,7 @@ function generateGradient() {
     let newColor2 = populate('#');
 
     //create random angle
-    let angle = Math.round(Math.random() * 360);
+    let angle:number = Math.round(Math.random() * 360);
 
     //return linear gradient color css
     return ("linear-gradient(" + angle + "deg, " + newColor1 + ", " + newColor2 + ")")

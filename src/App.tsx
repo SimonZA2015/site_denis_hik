@@ -14,14 +14,15 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import './App.css';
 // import ErrorView from "./data/views/Error";
 
-const App = () => {
+const App:React.FC = () => {
+//React.FC = React.FunctionComponent
 
-    const [popupMenu, setPopupMenu] = useState(false);
+    const [popupMenu, setPopupMenu] = useState<JSX.Element | boolean>(false);
     const [navBar, setNavBar]= useState(true);
-    const [xS, setxS] = useState(0);
-    let top = 0;
+    const [xS, setxS] = useState<number>(0);
+    let top: number = 0;
 
-    function openPop() {
+    function openPop():void {
         function closePop() {
             setPopupMenu(false);
         }
@@ -29,7 +30,7 @@ const App = () => {
         setPopupMenu(<MenuPopup closePopup={closePop}/>)
     }
 
-    function onChangeScroll(topS) {
+    function onChangeScroll(topS: number):void {
         //чекается когда меняется скролл
         if (top < topS) {
             //прячет навбар
@@ -44,7 +45,7 @@ const App = () => {
     return (
         <Scrollbars
             style={{width: '100vw', height: '100vh'}}
-            onScrollFrame={(e) => {
+            onScrollFrame={(e: any) => {
                 setxS(e.scrollTop);
                 // console.log(xS);
             }}
@@ -67,7 +68,6 @@ const App = () => {
                 <AthorBlock/>
             </div>
         </Scrollbars>
-
     );
 }
 
