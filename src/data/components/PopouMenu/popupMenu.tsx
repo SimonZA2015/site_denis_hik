@@ -1,10 +1,10 @@
 import {MouseEventHandler} from 'react';
 import {getPCversion, openUrl} from "../../functions/gets_funcs";
-import {gitUrl, instaUrl, vkUrl} from "../../configs/urls";
+import {gitUrl, instaUrl, telegramUrl} from "../../configs/urls";
 import {NavLink} from "react-router-dom";
 
 import style from './popupMenu.module.css';
-import {gitImageUrl, instaImageUrl, vkImageUrl} from "../../configs/images";
+import {gitImageUrl, instaImageUrl, telegramImageUrl} from "../../configs/images";
 
 interface propsI {
     closePopup: MouseEventHandler
@@ -32,7 +32,7 @@ const MenuPopup = ({closePopup}:propsI):JSX.Element => {
                 })}
                 <div className={style.bodyImagesUrls}>
                     <img src={gitImageUrl} height={'100%'} alt={'gitHub'} onClick={() => openUrl(gitUrl)} />
-                    <img src={vkImageUrl} height={'100%'} alt={'VK'} onClick={() => openUrl(vkUrl)} />
+                    <img src={telegramImageUrl} height={'100%'} alt={'VK'} onClick={() => openUrl(telegramUrl)} />
                     <img src={instaImageUrl} height={'100%'} alt={'Insta'} onClick={() => openUrl(instaUrl)} />
                     {/*<img src={donatMenu} height={'100%'} alt={'Donat'} onClick={() => openUrl(donatUrl)} />*/}
                 </div>
