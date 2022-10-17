@@ -8,7 +8,7 @@ import AthorBlock from "./data/components/AthorBlock/AthorBlock";
 import {Redirect, Route} from "react-router-dom";
 import ProjectsView from "./data/views/Projects";
 import BottomNavBar from "./data/components/BottomnavBlock/BottomNavBar";
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 
 import './App.css';
@@ -19,8 +19,6 @@ const App:React.FC = () => {
 
     const [popupMenu, setPopupMenu] = useState<JSX.Element | boolean>(false);
     const [navBar, setNavBar]= useState(true);
-    const [xS, setxS] = useState<number>(0);
-    let top: number = 0;
 
     function openPop():void {
         function closePop() {
@@ -30,27 +28,14 @@ const App:React.FC = () => {
         setPopupMenu(<MenuPopup closePopup={closePop}/>)
     }
 
-    function onChangeScroll(topS: number):void {
-        //чекается когда меняется скролл
-        if (top < topS) {
-            //прячет навбар
-            setNavBar(false);
-        }else {
-            //наоборот
-            setNavBar(true);
-        }
-        top = topS;
-    }
 
     return (
         <Scrollbars
             style={{width: '100vw', height: '100vh'}}
             onScrollFrame={(e: any) => {
-                setxS(e.scrollTop);
                 // console.log(xS);
             }}
-            onScrollStart={() => onChangeScroll(xS)}
-            onScrollStop={() => onChangeScroll(xS)}
+            id={'display'}
             onUpdate={console.log}
         >
             <div className="App">
@@ -64,7 +49,10 @@ const App:React.FC = () => {
                     <Redirect to={'/'}/>
                 </div>
                 {popupMenu}
-                {navBar ? <BottomNavBar/> : ''}
+                <BottomNavBar
+                    showHeight={50}
+                    customId={'display'}
+                />
                 <AthorBlock/>
             </div>
         </Scrollbars>

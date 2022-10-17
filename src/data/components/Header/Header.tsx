@@ -1,7 +1,7 @@
 import React, {MouseEventHandler} from "react";
 import menuImage from "../../media/menu.png";
 import {Link} from "react-router-dom";
-import logoMenu from '../../media/logo.png'
+import logoMenu from '../../media/-1__1.png'
 
 interface propsI {
     openPop: MouseEventHandler,
