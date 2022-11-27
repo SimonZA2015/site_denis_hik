@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './styles/Home.module.css';
-import TitleHomeBlock from "../components/TitleHomeBlock/TitleHomeBlock";
+import style from './Home.module.css';
+import TitleHomeBlock from "../../components/TitleHomeBlock/TitleHomeBlock";
 
 
 

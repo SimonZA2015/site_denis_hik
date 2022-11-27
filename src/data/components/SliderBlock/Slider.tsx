@@ -1,7 +1,8 @@
-import React, {PropsWithChildren} from 'react';
+import React from 'react';
 import Button from "../ButtonBlock/Button";
 
 import style from './SliderEquine.module.css'
+import {Body} from "./styled";
 
 interface dataI {
     button: any;
@@ -24,23 +25,23 @@ interface propsI {
 const Slider = (props:propsI) => {
 
     return (
-        <div className={style.contender}>
+        <Body>
             {props.list && props.list.map((data:dataI) => (
-                <div className={style.body} style={{background: data.gradient}}>
+                <div className={"item"} style={{background: data.gradient}}>
                     {data.image && <img src={data.image} alt={''}/>}
-                    {data.name && <div className={style.textBlock}>
+                    {data.name && <div className={"textBlock"}>
                         {data.name && <h4>{data.name}</h4>}
-                        {data.des && (data.button ? <div className={style.div1}><span>{data.des}</span></div> :
+                        {data.des && (data.button ? <div className={"div1"}><span>{data.des}</span></div> :
                             <div className={style.div2}><span>{data.des}</span></div>)}
                         {props.button && props.button.text[props.list.indexOf(data)] &&
                         <a target='example' href={props.button.url[props.list.indexOf(data)]}><Button
-                            className={style.buttons} pos={{position: 'absolute', left: '10px', bottom: '5px'}}
+                            className={"buttons"} pos={{position: 'absolute', left: '10px', bottom: '5px'}}
                             image={props.button.image[props.list.indexOf(data)]}
                             text={props.button.text[props.list.indexOf(data)]}/></a>}
                     </div>}
                 </div>
             ))}
-        </div>
+        </Body>
     )
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import style from './styles/Programming.module.css';
-import bgProgUrl from "../media/bgProg.jpg";
-import {Slider} from "../components/SliderBlock/Slider";
-import {getListProg} from "../functions/gets_funcs";
-import {listSpanEquineSlider, listTitleEquineSlider} from "../configs/text";
-import {listBgEquineSliders} from "../configs/images";
+import style from './Programming.module.css';
+import bgProgUrl from "../../media/bgProg.jpg";
+import {Slider} from "../../components/SliderBlock/Slider";
+import {getListProg} from "../../functions/gets_funcs";
+import {listSpanEquineSlider, listTitleEquineSlider} from "../../configs/text";
+import {listBgEquineSliders} from "../../configs/images";
 
 let listProg: {
     name: string,

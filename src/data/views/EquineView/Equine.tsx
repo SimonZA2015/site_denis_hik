@@ -1,9 +1,9 @@
 import React from 'react';
-import {Slider} from "../components/SliderBlock/Slider";
-import bgEquineUrl from "../media/bgEquine.jpg";
-import style from './styles/Equine.module.css';
-import {getListEquine} from "../functions/gets_funcs";
-import Button from "../components/ButtonBlock/Button";
+import {Slider} from "../../components/SliderBlock/Slider";
+import bgEquineUrl from "../../media/bgEquine.jpg";
+import style from './Equine.module.css';
+import {getListEquine} from "../../functions/gets_funcs";
+import Button from "../../components/ButtonBlock/Button";
 
 let listEquine: {
     name: string,

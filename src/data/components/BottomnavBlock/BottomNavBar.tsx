@@ -4,8 +4,7 @@ import {NavLink} from "react-router-dom";
 import nav0 from '../../media/nav0.png';
 import nav1 from '../../media/nav1.png';
 import nav2 from '../../media/nav2.png';
-
-import style from './BottomNavBar.module.css';
+import {Body, EmptyBlock} from "./styled";
 
 type Types = {
     isShow?: boolean;
@@ -17,11 +16,11 @@ type Types = {
 }
 
 const BottomNavBar: React.FC<Types> = ({
-                                           isShow = true,
-                                           mode = 'smooth',
-                                           showHeight = 100,
-                                           bottom,
-    customId= 'root',
+   isShow = true,
+   mode = 'smooth',
+   showHeight = 100,
+   bottom,
+   customId= 'root',
                                        }) => {
 
     const [bodyCh, setBodyCh] = useState(<div/>);
@@ -59,29 +58,30 @@ const BottomNavBar: React.FC<Types> = ({
 
     return (
         <>
-            {visible && <div className={style.body + ' NavBar'}>
+            {/*{visible && <EmptyBlock/>}*/}
+            {visible && <Body>
                 <NavLink
-                    className={style.nav}
+                    // className={style.nav}
                     onClick={scrollToTop}
                     to={navbar.urls[0]}
                 >
                     <img alt={'block' + 0} src={nav0}/>
                 </NavLink>
                 <NavLink
-                    className={style.nav}
+                    // className={style.nav}
                     onClick={scrollToTop}
                     to={navbar.urls[1]}
                 >
                     <img alt={'block' + 1} src={nav1}/>
                 </NavLink>
                 <NavLink
-                    className={style.nav}
+                    // className={style.nav}
                     to={navbar.urls[2]}
                     onClick={scrollToTop}
                 >
                     <img alt={'block' + 2} src={nav2}/>
                 </NavLink>
-            </div>}
+            </Body>}
         </>
     )
 }
