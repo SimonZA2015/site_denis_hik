@@ -8,7 +8,7 @@ const Button = (props) => {
         style={{textDecoration: 'none'}}
         target='example'
         href={props.url}>
-        <div className={style.body + ' ' + props.className} style={props.pos}>
+        <div className={style.body + ' ' + props.className} onClick={props.onClick} style={props.pos}>
             {/* eslint-disable-next-line no-mixed-operators */}
             {props.image ? <div style={{
                 backgroundPosition: 'center',
