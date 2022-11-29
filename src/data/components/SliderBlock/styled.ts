@@ -60,4 +60,21 @@ export const Body = styled.div`
       left: 0;
     }
   }
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .item {
+      width: calc(100vmax / 3.2);
+      height: calc(90vh / 3);
+      margin-left: 5px;
+      margin-right: 0;
+    }
+    .textBlock div {
+      text-align: center;
+    }
+
+  }
 `;
