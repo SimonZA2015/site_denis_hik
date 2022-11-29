@@ -2,6 +2,7 @@ import React, {MouseEventHandler} from "react";
 import menuImage from "../../media/menu.png";
 import {Link} from "react-router-dom";
 import logoMenu from '../../media/-1__1.png'
+import logoMenuPhone from '../../media/phone.png'
 import {BodyHeader} from "./styled";
 
 interface propsI {
@@ -17,6 +18,7 @@ const Header = ({openPop}:propsI) => {
             <Link className={'logoHeader'} to='/' ><img src={logoMenu} alt={'logo header'} /></Link>
             <h4 className={'title-author'}>Denis Hik</h4>
             <img className={'menuHeader'} src={menuImage} height={40} alt={'menu'} onClick={openPop} />
+            <img className={'menuHeaderPhone'} src={logoMenuPhone} height={40} alt={'menu'} onClick={openPop} />
             {/*<img className={'donatHeader'} src={donatMenu} height={40} alt={'donat'} onClick={onClickDonat} />*/}
         </BodyHeader>
     )

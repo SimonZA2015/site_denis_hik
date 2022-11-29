@@ -7,16 +7,17 @@ export const BodyPopout = styled.div `
   width: 100vw;
   height: 220vh;
   background: rgba(0 , 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   .panel {
     position: fixed;
-    left: 25vh;
     bottom: 30vh;
     width: 60vw;
     height: 50vh;
     background: white;
     border-radius: 20px;
-    
     
     .item {
       width: calc(100% - 20px);

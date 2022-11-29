@@ -61,12 +61,23 @@
 
 @media (max-width: 650px) {
     .background {
-        visibility: hidden;
+        visibility: visible;
     }
     .backgroundPC {
+        visibility: visible;
+    }
+    .nav {
+        position: absolute;
         visibility: hidden;
     }
     .body {
-        visibility: hidden;
+        top: unset;
+        right: unset;
+        left: 0;
+        bottom: 0;
+        width: calc(100vw - 10px);
+        border-radius: 10px 10px 0 0;
+        height: 50px;
+        visibility: visible;
     }
 }

@@ -29,10 +29,19 @@ export const BodyHeader = styled.header`
     right: 5px;
     align-content: center;
   }
+  .menuHeaderPhone {
+    visibility: visible;
+    position: absolute;
+    right: 5px;
+    align-content: center;
+  }
 
   @media (min-width: 650px) {
     .menuHeader {
       visibility: visible;
+    }
+    .menuHeaderPhone {
+      visibility: hidden;
     }
   }
 
