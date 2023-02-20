@@ -6,7 +6,7 @@ let listSpanEquineSlider = ['Диплом о профиссиональном о
 
 let listTitleProgramingSlider = ['Знаю зыки программинга', 'Frontend-разрабочик', 'Красивый код'];
 let listSpanProgrammingSlider =
-    ['Пишу на языках: Java(Android apps), Python, Java-Script(React)', 'Стремлюсь стать профессиональным Frontend-разработчиком', 'Придерживаюсь красивого и понятного кода'];
+    ['Пишу на языках: Java(Android apps), Python, Java-Script(React, TS, Redux), C# (Unity 2019)', 'Стремлюсь стать профессиональным Frontend-разработчиком', 'Придерживаюсь красивого и понятного кода'];
 export let headerHomeText = {
     title: "Denis Hik",
     span0: "Разрабочик разных проектов,",
