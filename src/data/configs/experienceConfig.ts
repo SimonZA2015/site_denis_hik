@@ -7,9 +7,9 @@ type experienceConfigType = {
 }
 
 export const experienceConfig: experienceConfigType[] = [{
-    titleCompany: 'ООО "Облачные технологии"',
+    titleCompany: 'ООО "Clouds Technologies"',
     startDate: "10.01.2022",
-    endDate: "по настоящее время",
-    role: "Front-End разработчик",
+    endDate: "Untill Now",
+    role: "Frontend-Developer",
     image: "https://static.tildacdn.com/tild3330-6537-4365-b830-303239616330/Frame_40.png"
 }]

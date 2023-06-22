@@ -6,6 +6,7 @@ import {Slider} from "../../components/SliderBlock/Slider";
 import {getListProg} from "../../functions/gets_funcs";
 import Button from "../../components/ButtonBlock/Button";
 import {ExperiencePopout} from "../../components/ExperiencePopout";
+import {titlePages} from "../../configs/text";
 
 let listProg: {
     name: string,
@@ -21,12 +22,12 @@ const ProgrammingView = () => {
             <div className={style.body}>
                 <div className={style.banner} style={{backgroundImage: 'url(' + bgProgUrl + ')'}} />
                 <div className={style.bottomStart} >
-                    <h1>Программирование</h1>
+                    <h1>{titlePages.programming}</h1>
                     <div className={style.blockButtons}>
                         <div />
                         <Button
                             className={style.bottomStartButton}
-                            text='Опыт работы'
+                            text='Experience'
                             onClick={() => {
                                 setVisible(!visible)
                             }}

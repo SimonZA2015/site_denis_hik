@@ -5,12 +5,13 @@ import {NavLink} from "react-router-dom";
 
 import style from './popupMenu.module.css';
 import {gitImageUrl, instaImageUrl, telegramImageUrl} from "../../configs/images";
+import {titlePages} from "../../configs/text";
 
 interface propsI {
     closePopup: MouseEventHandler
 }
 
-let listName: Array<string> = ['Конный спорт', 'Программирование', 'Проекты'];
+let listName: Array<string> = [titlePages.equine, titlePages.programming, titlePages.programming];
 let styleBg: string = style.background;
 
 if (getPCversion()) {

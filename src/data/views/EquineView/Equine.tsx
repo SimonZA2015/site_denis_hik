@@ -4,6 +4,7 @@ import bgEquineUrl from "../../media/bgEquine.jpg";
 import style from './Equine.module.css';
 import {getListEquine} from "../../functions/gets_funcs";
 import Button from "../../components/ButtonBlock/Button";
+import {titlePages} from "../../configs/text";
 
 let listEquine: {
     name: string,
@@ -19,7 +20,7 @@ const Equine = () => {
             <div className={style.body}>
                 <div className={style.banner} style={{backgroundImage: 'url(' + bgEquineUrl + ')'}}/>
                 <div className={style.bottomStart}>
-                    <h1>Конная сфера</h1>
+                    <h1>{titlePages.equine}</h1>
                     <div className={style.blockButtons}>
                         <div />
                         <Button className={style.bottomStartButton} url='https://instagram.com/denis_hik'

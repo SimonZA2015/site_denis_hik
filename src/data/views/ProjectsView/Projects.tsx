@@ -4,7 +4,7 @@ import {getListProj} from "../../functions/gets_funcs";
 import Button from "../../components/ButtonBlock/Button";
 import {bgProjUrl} from "../../configs/images";
 import {
-    listButtonsProjectSlider
+    listButtonsProjectSlider, titlePages
 } from "../../configs/text";
 import {gitUrl} from "../../configs/urls";
 import {MainCard} from "./styled";
@@ -28,7 +28,7 @@ const ProjectsView = ():JSX.Element => {
             <MainCard>
                 <div className={'banner'} style={{backgroundImage: 'url(' + bgProjUrl + ')'}}/>
                 <div className={"bottomStart"}>
-                    <h1>Проекты</h1>
+                    <h1>{titlePages.project}</h1>
                     <div className={"blockButtons"}>
                         <div/>
                         <Button className={"bottomStartButton"} url={gitUrl} text='Git hub'/>
