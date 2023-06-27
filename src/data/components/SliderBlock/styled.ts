@@ -60,7 +60,11 @@ export const Body = styled.div`
       left: 0;
     }
   }
-
+  @media (max-width: 700px) {
+    .item:last-child {
+      margin-bottom: 80px;
+    }
+  }
   @media (min-width: 700px) {
     flex-direction: row;
     justify-content: center;

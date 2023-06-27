@@ -11,7 +11,7 @@ interface propsI {
     closePopup: MouseEventHandler
 }
 
-let listName: Array<string> = [titlePages.equine, titlePages.programming, titlePages.programming];
+let listName: Array<string> = [titlePages.equine, titlePages.programming, titlePages.project];
 let styleBg: string = style.background;
 
 if (getPCversion()) {
