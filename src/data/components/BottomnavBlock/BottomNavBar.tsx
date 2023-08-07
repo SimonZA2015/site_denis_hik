@@ -21,10 +21,12 @@ const BottomNavBar: React.FC<Types> = ({
    showHeight = 100,
    bottom,
    customId= 'root',
+    children
                                        }) => {
 
     const [bodyCh, setBodyCh] = useState(<div/>);
     const [visible, setVisible] = useState(false);
+    const [render, setRender] = useState(0);
 
     const toggleVisible = useCallback(
         e => {
@@ -55,6 +57,11 @@ const BottomNavBar: React.FC<Types> = ({
             window.removeEventListener('scroll', toggleVisible, true);
         };
     });
+
+    useEffect(() => {
+        setRender(prev => ++prev);
+        console.log(render + 1)
+    }, [children])
 
     return (
         <>

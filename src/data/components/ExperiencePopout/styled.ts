@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const BodyPopout = styled.div `
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
-  height: 220vh;
+  height: 100vh;
   background: rgba(0 , 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
   
   .panel {
     position: fixed;
@@ -18,6 +19,20 @@ export const BodyPopout = styled.div `
     height: 50vh;
     background: white;
     border-radius: 20px;
+    z-index: 9999;
+    
+    .block-add {
+      display: flex;
+      margin: 10px;
+      margin-top: 0px;
+      gap: 10px;
+      position: absolute;
+      bottom: 0px;
+      
+      img, svg {
+        cursor: pointer;
+      }
+    }
     
     .item {
       width: calc(100% - 20px);

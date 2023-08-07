@@ -1,13 +1,10 @@
 import React from 'react';
 import {Slider} from "../../components/SliderBlock/Slider";
 import {getListProj} from "../../functions/gets_funcs";
-import Button from "../../components/ButtonBlock/Button";
-import {bgProjUrl} from "../../configs/images";
-import {
-    listButtonsProjectSlider, titlePages
-} from "../../configs/text";
+import bjProj from "../../media/bg.jpg";
+import {listButtonsProjectSlider, titlePages} from "../../configs/text";
 import {gitUrl} from "../../configs/urls";
-import {MainCard} from "./styled";
+import BodyUI from "../../components/BodyUI";
 
 let list: {
     name: string,
@@ -24,19 +21,27 @@ let button: {
 const ProjectsView = ():JSX.Element => {
 
     return (
-        <div>
-            <MainCard>
-                <div className={'banner'} style={{backgroundImage: 'url(' + bgProjUrl + ')'}}/>
-                <div className={"bottomStart"}>
-                    <h1>{titlePages.project}</h1>
-                    <div className={"blockButtons"}>
-                        <div/>
-                        <Button className={"bottomStartButton"} url={gitUrl} text='Git hub'/>
-                    </div>
-                </div>
-                <Slider button={button} list={list}/>
-            </MainCard>
-        </div>
+        // <div>
+        //     <MainCard>
+        //         <div className={'banner'} style={{backgroundImage: 'url(' + bjProj + ')'}}/>
+        //         <div className={"bottomStart"}>
+        //             <h1>{titlePages.project}</h1>
+        //             <div className={"blockButtons"}>
+        //                 <div/>
+        //                 <Button className={"bottomStartButton"} url={gitUrl} text='Git hub'/>
+        //             </div>
+        //         </div>
+        //         <Slider button={button} list={list}/>
+        //     </MainCard>
+        // </div>
+        <BodyUI
+            image={bjProj}
+            title={titlePages.project}
+            button={{name: "Git hub", link: gitUrl}}
+
+        >
+            <Slider button={button} list={list}/>
+        </BodyUI>
     )
 }
 

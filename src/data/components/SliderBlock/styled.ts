@@ -62,7 +62,7 @@ export const Body = styled.div`
   }
   @media (max-width: 700px) {
     .item:last-child {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
   }
   @media (min-width: 700px) {
