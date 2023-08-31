@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import MenuPopup from "./data/components/PopouMenu/popupMenu";
 import HomeView from "./data/views/HomeView/Home";
 import EquineView from "./data/views/EquineView/Equine";
@@ -12,6 +12,7 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 
 
 import './App.css';
+import {REQUEST_SERVER} from "./data/configs/backend";
 // import ErrorView from "./data/views/Error";
 
 const App:React.FC = () => {
@@ -26,6 +27,27 @@ const App:React.FC = () => {
 
         setPopupMenu(<MenuPopup closePopup={closePop}/>)
     }
+
+    useEffect(() => {
+        const statictic = localStorage.getItem("statistic")
+
+        if (!statictic) {
+            fetch(`${REQUEST_SERVER}analytics`, {method: "GET", mode: "cors", headers: {"Access-Control-Allow-Origin": "*"}})
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data?.status.indexOf("success") > -1) {
+                        localStorage.setItem("statistic", "1")
+                    } else {
+
+                    }
+                })
+                .catch(function (error) {
+
+                });
+        }
+    }, []);
 
 
     return (

@@ -31,8 +31,8 @@ export const ExperiencePopout: React.FC<Types> = ({
                         </div>
                     ))}
                     {isAdd && <div className={"block-add"}>
-                        <LinkedinIcon onClick={open("https://hh.ru/resume/8e5c2758ff089a14f40039ed1f746170327a44")} size={50} />
-                        <HHIcon onClick={open("https://www.linkedin.com/in/denishik")} size={50} />
+                        <LinkedinIcon onClick={open("https://www.linkedin.com/in/denishik")} size={50} />
+                        <HHIcon onClick={open("https://hh.ru/resume/8e5c2758ff089a14f40039ed1f746170327a44")} size={50} />
                     </div>}
                 </div>
             </BodyPopout>
