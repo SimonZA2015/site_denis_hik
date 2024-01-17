@@ -12,4 +12,10 @@ export const experienceConfig: experienceConfigType[] = [{
     endDate: "10.08.2023",
     role: "Frontend-Developer",
     image: "https://static.tildacdn.com/tild3330-6537-4365-b830-303239616330/Frame_40.png"
+},{
+    titleCompany: '"WEBLOCK" LLC',
+    startDate: "26.09.2023",
+    endDate: "Untill Now",
+    role: "Frontend-Developer",
+    image: ""
 }]

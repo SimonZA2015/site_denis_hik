@@ -7,7 +7,13 @@ import {
     listTitleProgramingSlider, listTitleProjectSlider
 } from "../configs/text";
 import {listBgEquineSliders} from "../configs/images";
+import img from "./../media/langa.png"
+import {TSlider} from "../components/SliderBlock/Slider";
+import {CSSProperties} from "react";
 
+const styledIMage: { [key: string]: CSSProperties } = {
+    image: {objectFit: "contain", bottom: 0, top: "unset", left: 0, height: "auto"}
+}
 
 const getPCversion = () => {
     //preparation display width & height
@@ -22,71 +28,27 @@ const openUrl = (url: string) => {
     window.open(url,"_blank")
 }
 
-const getListEquine = ():Array<any> => {
-    let data:{name: string, des: string, image: string, gradient: string} ;
-    let listV:Array<{name: string, des: string, image: string, gradient: string}> = [];
+const getListEquine = ():Array<any> => new Array(3).fill("").map((_v, index) => ({
+    name: listTitleEquineSlider[index],
+    des: listSpanEquineSlider[index],
+    image: listBgEquineSliders[index],
+    gradient: generateGradient(),
+})) as TSlider[]
 
-    for (let i = 0; i < 3; i++) {
-        let gradient = generateGradient();
+const getListProg = (): TSlider[] => new Array(3).fill("").map((_v, index) => ({
+    name: listTitleProgramingSlider[index],
+    des: listSpanProgrammingSlider[index],
+    image:index === 0 ? img : undefined,
+    styled: index === 0 ? styledIMage : undefined,
+    gradient: generateGradient(),
+})) as TSlider[];
 
-        data = {
-            name: listTitleEquineSlider[i],
-            des: listSpanEquineSlider[i],
-            image: listBgEquineSliders[i],
-            gradient: gradient,
-        }
+const getListProj = (): TSlider[] =>  new Array(3).fill("").map((_v, index) => ({
+    name: listTitleProjectSlider[index],
+    des: listSpanProjectSlider[index],
+    image: listImageProjectSlider[index],
+    gradient: generateGradient(),
+})) as TSlider[];
 
-        listV.push(data);
-    }
-
-    return listV;
-}
-
-const getListProg = () => {
-    let data:{name: string, des: string, gradient: string} ;
-    let listP:Array<{name: string, des: string, gradient: string}>  = [];
-    for (let i = 0; i < 3; i++) {
-
-        let gradient = generateGradient();
-
-        data = {
-            name: listTitleProgramingSlider[i],
-            des: listSpanProgrammingSlider[i],
-            gradient: gradient,
-        }
-
-        listP.push(data);
-    }
-
-    return listP;
-}
-
-const getListProj = () => {
-    let data:{name: string, des: string, image: string | boolean, gradient: string} ;
-    let listProject:Array<{name: string, des: string, image: string | boolean, gradient: string}>  = [];
-    for (let i = 0; i < 3; i++) {
-
-        let gradient = '#f1f1f1';
-
-
-        if (listTitleProjectSlider[i] !== '') {
-
-            gradient = generateGradient();
-
-        }
-
-
-        data = {
-            name: listTitleProjectSlider[i],
-            des: listSpanProjectSlider[i],
-            image: listImageProjectSlider[i],
-            gradient: gradient,
-        }
-
-        listProject.push(data)
-    }
-
-    return (listProject)
-}
 
 export {getListProj, getListProg, getListEquine, openUrl, getPCversion}
