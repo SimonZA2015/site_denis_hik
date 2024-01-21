@@ -28,11 +28,13 @@ export const BodyHeader = styled.header`
     position: absolute;
     right: 5px;
     align-content: center;
+    cursor: pointer;
   }
   .menuHeaderPhone {
     visibility: visible;
     position: absolute;
     right: 5px;
+    cursor: pointer;
     align-content: center;
   }
 

@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import nav0 from '../../media/nav0.png';
 import nav1 from '../../media/nav1.png';
 import nav2 from '../../media/nav2.png';
-import {Body, EmptyBlock} from "./styled";
+import {Body} from "./styled";
 
 type Types = {
     isShow?: boolean;
@@ -60,29 +60,24 @@ const BottomNavBar: React.FC<Types> = ({
 
     useEffect(() => {
         setRender(prev => ++prev);
-        console.log(render + 1)
     }, [children])
 
     return (
         <>
-            {/*{visible && <EmptyBlock/>}*/}
             {visible && <Body>
                 <NavLink
-                    // className={style.nav}
                     onClick={scrollToTop}
                     to={navbar.urls[0]}
                 >
                     <img alt={'block' + 0} src={nav0}/>
                 </NavLink>
                 <NavLink
-                    // className={style.nav}
                     onClick={scrollToTop}
                     to={navbar.urls[1]}
                 >
                     <img alt={'block' + 1} src={nav1}/>
                 </NavLink>
                 <NavLink
-                    // className={style.nav}
                     to={navbar.urls[2]}
                     onClick={scrollToTop}
                 >

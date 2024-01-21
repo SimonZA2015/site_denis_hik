@@ -7,7 +7,7 @@ type experienceConfigType = {
 }
 
 export const experienceConfig: experienceConfigType[] = [{
-    titleCompany: 'ООО "Clouds Technologies"',
+    titleCompany: '"Clouds Technologies LLC"',
     startDate: "10.01.2022",
     endDate: "10.08.2023",
     role: "Frontend-Developer",

@@ -1,17 +1,14 @@
 import React from 'react';
-import style from './Home.module.css';
-import TitleHomeBlock from "../../components/TitleHomeBlock/TitleHomeBlock";
-
+import TitleHomeBlock from "./components/header/TitleHomeBlock";
+import {BodyHome} from "./styled";
 
 
 const HomeView = () => {
 
     return (
-        <div
-            className={style.body}
-        >
+        <BodyHome>
             <TitleHomeBlock />
-        </div>
+        </BodyHome>
     )
 }
 

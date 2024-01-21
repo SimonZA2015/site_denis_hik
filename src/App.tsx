@@ -4,23 +4,22 @@ import HomeView from "./data/views/HomeView/Home";
 import EquineView from "./data/views/EquineView/Equine";
 import ProgrammingView from "./data/views/ProgrammingView/Programming";
 import Header from "./data/components/Header/Header";
-import AthorBlock from "./data/components/AthorBlock/AthorBlock";
+import AuthorBlock from "./data/components/AuthorBlock/AuthorBlock";
 import {Redirect, Route} from "react-router-dom";
 import ProjectsView from "./data/views/ProjectsView/Projects";
 import BottomNavBar from "./data/components/BottomnavBlock/BottomNavBar";
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import {Scrollbars} from 'react-custom-scrollbars-2';
 
 
 import './App.css';
 import {REQUEST_SERVER} from "./data/configs/backend";
-// import ErrorView from "./data/views/Error";
+import RequestDHCAPi from "./data/context/request";
 
-const App:React.FC = () => {
-//React.FC = React.FunctionComponent
+const App: React.FC = () => {
 
     const [popupMenu, setPopupMenu] = useState<JSX.Element | boolean>(false);
 
-    function openPop():void {
+    function openPop(): void {
         function closePop() {
             setPopupMenu(false);
         }
@@ -32,20 +31,11 @@ const App:React.FC = () => {
         const statictic = localStorage.getItem("statistic")
 
         if (!statictic) {
-            fetch(`${REQUEST_SERVER}analytics`, {method: "GET", mode: "cors", headers: {"Access-Control-Allow-Origin": "*"}})
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    if (data?.status.indexOf("success") > -1) {
-                        localStorage.setItem("statistic", "1")
-                    } else {
-
-                    }
-                })
-                .catch(function (error) {
-
-                });
+            RequestDHCAPi<{status: string}>({url: "analytics", onSuccess: (data) => {
+                if (data?.status.indexOf("success") > -1) {
+                    localStorage.setItem("statistic", "1")
+                }
+            }})
         }
     }, []);
 
@@ -69,7 +59,7 @@ const App:React.FC = () => {
                     showHeight={50}
                     customId={'display'}
                 />
-                <AthorBlock/>
+                <AuthorBlock/>
             </div>
         </Scrollbars>
     );

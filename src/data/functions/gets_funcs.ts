@@ -11,8 +11,9 @@ import img from "./../media/langa.png"
 import {TSlider} from "../components/SliderBlock/Slider";
 import {CSSProperties} from "react";
 
-const styledIMage: { [key: string]: CSSProperties } = {
-    image: {objectFit: "contain", bottom: 0, top: "unset", left: 0, height: "auto"}
+const styledSlider: { [key: string]: CSSProperties } = {
+    image: {objectFit: "contain", bottom: 0, top: "unset", left: 0, height: "auto"},
+    base: {overflow: "hidden"}
 }
 
 const getPCversion = () => {
@@ -39,7 +40,7 @@ const getListProg = (): TSlider[] => new Array(3).fill("").map((_v, index) => ({
     name: listTitleProgramingSlider[index],
     des: listSpanProgrammingSlider[index],
     image:index === 0 ? img : undefined,
-    styled: index === 0 ? styledIMage : undefined,
+    styled: index === 0 ? styledSlider : undefined,
     gradient: generateGradient(),
 })) as TSlider[];
 

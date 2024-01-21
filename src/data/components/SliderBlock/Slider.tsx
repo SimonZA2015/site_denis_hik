@@ -32,7 +32,7 @@ const Slider = (props:{list: TSlider[], button?: TButton }) => {
                         }
                         {props.button && props.button.text[index] &&
                         <a target='example' href={props.button.url[index]}><Button
-                            className={"buttons"} pos={{position: 'absolute', left: '10px', bottom: '5px'}}
+                            className={"buttons"} style={{position: 'absolute', left: '10px', bottom: '5px'}}
                             image={props.button.image[index]}
                             text={props.button.text[index]}/></a>}
                     </div>}
