@@ -4,7 +4,7 @@ let logoImageUrl = './data/media/logo.ico';
 let menuImageUrl = 'http://cdn.onlinewebfonts.com/svg/img_56274.png';
 let gitImageUrl = 'http://pngimg.com/uploads/github/github_PNG40.png';
 let playImageUrl = 'https://www.freeiconspng.com/uploads/play-button-icon-png-8.png';
-let vkImageUrl = 'https://static.tildacdn.com/tild3731-3236-4364-b266-336436626566/photo.png';
+let telegramImageUrl = 'https://static.tildacdn.com/tild3134-6130-4630-a465-396432363262/telegram-logo.png';
 let instaImageUrl = 'https://w7.pngwing.com/pngs/623/523/png-transparent-instagram-logo-instagram-facebook-inc-youtube-organization-instagram.png';
 let bgHomeUrl = 'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/ijt4igw1ft4-800x1200.jpeg';
 let bgEquineUrl = 'https://v4x9gljxlqblzwzhinbuoq-on.drv.tw/Vkonyushne/my%20syte/assets/images/xaspejrjzf4-1600x1067.jpg';
@@ -33,4 +33,4 @@ let navbar = {
 };
 
 
-export {bgProjSlider, navbar, playImageUrl, donatMenu, listBgEquineSliders, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, vkImageUrl};
+export {bgProjSlider, navbar, playImageUrl, donatMenu, listBgEquineSliders, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, telegramImageUrl};

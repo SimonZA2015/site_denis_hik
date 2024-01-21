@@ -1,28 +1,25 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import MenuPopup from "./data/components/PopouMenu/popupMenu";
-import HomeView from "./data/views/Home";
-import EquineView from "./data/views/Equine";
-import ProgrammingView from "./data/views/Programming";
+import HomeView from "./data/views/HomeView/Home";
+import EquineView from "./data/views/EquineView/Equine";
+import ProgrammingView from "./data/views/ProgrammingView/Programming";
 import Header from "./data/components/Header/Header";
-import AthorBlock from "./data/components/AthorBlock/AthorBlock";
+import AuthorBlock from "./data/components/AuthorBlock/AuthorBlock";
 import {Redirect, Route} from "react-router-dom";
-import ProjectsView from "./data/views/Projects";
+import ProjectsView from "./data/views/ProjectsView/Projects";
 import BottomNavBar from "./data/components/BottomnavBlock/BottomNavBar";
-import { Scrollbars } from 'react-custom-scrollbars';
+import {Scrollbars} from 'react-custom-scrollbars-2';
 
 
 import './App.css';
-// import ErrorView from "./data/views/Error";
+import {REQUEST_SERVER} from "./data/configs/backend";
+import RequestDHCAPi from "./data/context/request";
 
-const App:React.FC = () => {
-//React.FC = React.FunctionComponent
+const App: React.FC = () => {
 
     const [popupMenu, setPopupMenu] = useState<JSX.Element | boolean>(false);
-    const [navBar, setNavBar]= useState(true);
-    const [xS, setxS] = useState<number>(0);
-    let top: number = 0;
 
-    function openPop():void {
+    function openPop(): void {
         function closePop() {
             setPopupMenu(false);
         }
@@ -30,28 +27,23 @@ const App:React.FC = () => {
         setPopupMenu(<MenuPopup closePopup={closePop}/>)
     }
 
-    function onChangeScroll(topS: number):void {
-        //чекается когда меняется скролл
-        if (top < topS) {
-            //прячет навбар
-            setNavBar(false);
-        }else {
-            //наоборот
-            setNavBar(true);
+    useEffect(() => {
+        const statictic = localStorage.getItem("statistic")
+
+        if (!statictic) {
+            RequestDHCAPi<{status: string}>({url: "analytics", onSuccess: (data) => {
+                if (data?.status.indexOf("success") > -1) {
+                    localStorage.setItem("statistic", "1")
+                }
+            }})
         }
-        top = topS;
-    }
+    }, []);
+
 
     return (
         <Scrollbars
             style={{width: '100vw', height: '100vh'}}
-            onScrollFrame={(e: any) => {
-                setxS(e.scrollTop);
-                // console.log(xS);
-            }}
-            onScrollStart={() => onChangeScroll(xS)}
-            onScrollStop={() => onChangeScroll(xS)}
-            onUpdate={console.log}
+            id={'display'}
         >
             <div className="App">
                 <Header openPop={openPop}/>
@@ -60,12 +52,14 @@ const App:React.FC = () => {
                     <Route path='/equine' component={EquineView}/>
                     <Route path='/programming' component={ProgrammingView}/>
                     <Route path='/project' component={ProjectsView}/>
-                    {/*<Route exact path='*' components={ErrorView} />*/}
                     <Redirect to={'/'}/>
                 </div>
                 {popupMenu}
-                {navBar ? <BottomNavBar/> : ''}
-                <AthorBlock/>
+                <BottomNavBar
+                    showHeight={50}
+                    customId={'display'}
+                />
+                <AuthorBlock/>
             </div>
         </Scrollbars>
     );

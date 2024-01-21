@@ -1,14 +1,20 @@
 import React from 'react';
+import {BodyButtonBlock} from "./styled";
 
-import style from './Button.module.css'
+type TButtonProps = {
+    className?: string
+    url?: string,
+    onClick?: React.MouseEventHandler<HTMLDivElement>
+    style?: React.CSSProperties
+    image?: string
+    text: string
+}
+const Button = (props: TButtonProps) => {
 
-const Button = (props) => {
-
-    return (<a
-        style={{textDecoration: 'none'}}
+    return (<BodyButtonBlock
         target='example'
         href={props.url}>
-        <div className={style.body + ' ' + props.className} style={props.pos}>
+        <div className={'body' + ' ' + props.className} onClick={props.onClick} style={props.style}>
             {/* eslint-disable-next-line no-mixed-operators */}
             {props.image ? <div style={{
                 backgroundPosition: 'center',
@@ -17,7 +23,7 @@ const Button = (props) => {
             }}/> : ''}
             <h4>{props.text}</h4>
         </div>
-    </a>)
+    </BodyButtonBlock>)
 }
 
 export default Button;
