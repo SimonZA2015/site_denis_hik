@@ -1,4 +1,5 @@
-import {REQUEST_SERVER} from "../configs/backend";
+import axios from "axios";
+import env from "../../env";
 
 type TRequestDHCApi<T> = {
     url: string,
@@ -8,23 +9,22 @@ type TRequestDHCApi<T> = {
     onError?: (err: {message: string, code: number}) => void
 }
 
-const RequestDHCAPi = <T,>({url, method = "GET", body, onError, onSuccess}: TRequestDHCApi<T>): Promise<any>  => {
-    const pr = fetch(`${REQUEST_SERVER}${url}`, {
-        method: method,
-        body: body,
-        mode: "cors",
-        headers: {"Access-Control-Allow-Origin": "*"}
+const RequestDHCAPi = <T, >({url, method = "GET", body, onError, onSuccess}: TRequestDHCApi<T>): Promise<any> => {
+    const res = axios<T>(`${env.baseEndpoint}/${url}`,{
+        method,
+        headers: {"Access-Control-Allow-Origin": "*"},
+        // @ts-ignore
+        mode: 'no-cors',
     })
-        pr
-        .then((response) => response.json())
+    res
         .then((data) => {
             onSuccess && onSuccess(data as T)
         })
         .catch((error) => {
-            onError && onError(error )
+            onError && onError(error)
         });
 
-    return pr
+    return res
 }
 
 export default RequestDHCAPi

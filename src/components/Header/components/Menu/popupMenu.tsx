@@ -1,7 +1,7 @@
-import {MouseEventHandler, useContext} from 'react';
+import {useContext} from 'react';
 import {openUrl} from "../../../../modal/functions/gets_funcs";
-import {gitUrl, instaUrl, telegramUrl} from "../../../../modal/configs/urls";
-import {gitImageUrl, instaImageUrl, telegramImageUrl} from "../../../../modal/configs/images";
+import {gitUrl, instaUrl, scetchfabUrl, telegramUrl} from "../../../../modal/configs/urls";
+import {gitImageUrl, instaImageUrl, scetchfabeImageUrl, telegramImageUrl} from "../../../../modal/configs/images";
 import {titlePages} from "../../../../modal/configs/text";
 import {BodyPopoutMenu, ButtonLink} from "./styled";
 import {globalContext} from "../../../../modal/context";
@@ -26,6 +26,7 @@ const MenuPopup = ({}:propsI):JSX.Element => {
                 ))}
                 <div className={"bodyImagesUrls"}>
                     <img src={gitImageUrl} height={'100%'} alt={'gitHub'} onClick={() => openUrl(gitUrl)} />
+                    <img src={scetchfabeImageUrl} height={'100%'} alt={'gitHub'} onClick={() => openUrl(scetchfabUrl)} />
                     <img src={telegramImageUrl} height={'100%'} alt={'VK'} onClick={() => openUrl(telegramUrl)} />
                     <img src={instaImageUrl} height={'100%'} alt={'Insta'} onClick={() => openUrl(instaUrl)} />
                 </div>

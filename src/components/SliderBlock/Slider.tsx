@@ -22,7 +22,7 @@ const Slider = (props:{list: TSlider[], button?: TButton }) => {
     return (
         <Body>
             {props.list && props.list.map((data, index) => (
-                <div className={`item`} style={{background: data.gradient, ...data.styled?.base}}>
+                <div key={index} className={`item`} style={{background: data.gradient, ...data.styled?.base}}>
                     {data.image && <img style={data.styled?.image} src={data.image} alt={''}/>}
                     {data.name && <div className={"textBlock"}>
                         {data.name && <h4>{data.name}</h4>}

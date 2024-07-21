@@ -1,7 +1,5 @@
 import React from "react";
-import {Body, ImageDiv} from "./styled";
-import {titlePages} from "../../modal/configs/text";
-import style from "../views/EquineView/Equine.module.css";
+import {Body} from "./styled";
 import Button from "../ButtonBlock/Button";
 
 type BodyUIType = {

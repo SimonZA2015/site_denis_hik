@@ -3,6 +3,7 @@ import diplom from '../../media/diplom.jpg'
 let logoImageUrl = './data/media/logo.ico';
 let menuImageUrl = 'http://cdn.onlinewebfonts.com/svg/img_56274.png';
 let gitImageUrl = 'http://pngimg.com/uploads/github/github_PNG40.png';
+let scetchfabeImageUrl = 'https://static.sketchfab.com/static/builds/web/dist/static/assets/images/favicon/a81e1fd93fc053fed8a5f56640f886f8-v2.png';
 let playImageUrl = 'https://www.freeiconspng.com/uploads/play-button-icon-png-8.png';
 let telegramImageUrl = 'https://static.tildacdn.com/tild3134-6130-4630-a465-396432363262/telegram-logo.png';
 let instaImageUrl = 'https://w7.pngwing.com/pngs/623/523/png-transparent-instagram-logo-instagram-facebook-inc-youtube-organization-instagram.png';
@@ -33,4 +34,4 @@ let navbar = {
 };
 
 
-export {bgProjSlider, navbar, playImageUrl, donatMenu, listBgEquineSliders, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, telegramImageUrl};
+export {bgProjSlider, navbar, playImageUrl, donatMenu, listBgEquineSliders, scetchfabeImageUrl, bgProjUrl, bgProgUrl, bgEquineUrl, bgHomeUrl, instaImageUrl, gitImageUrl, menuImageUrl, logoImageUrl, telegramImageUrl};

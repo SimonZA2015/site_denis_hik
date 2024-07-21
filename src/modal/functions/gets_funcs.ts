@@ -1,9 +1,11 @@
 import {
     listImageProjectSlider,
     listSpanEquineSlider,
-    listSpanProgrammingSlider, listSpanProjectSlider,
+    listSpanProgrammingSlider,
+    listSpanProjectSlider,
     listTitleEquineSlider,
-    listTitleProgramingSlider, listTitleProjectSlider
+    listTitleProgramingSlider,
+    listTitleProjectSlider
 } from "../configs/text";
 import {listBgEquineSliders} from "../configs/images";
 import img from "../../media/langa.png"

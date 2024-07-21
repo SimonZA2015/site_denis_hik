@@ -1,39 +1,41 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import MenuPopup from "./components/Header/components/Menu/popupMenu";
 import HomeView from "./components/views/HomeView/Home";
 import EquineView from "./components/views/EquineView/Equine";
 import ProgrammingView from "./components/views/ProgrammingView/Programming";
 import Header from "./components/Header/Header";
-import AuthorBlock from "./components/AuthorBlock/AuthorBlock";
-import {Redirect, Route} from "react-router-dom";
 import ProjectsView from "./components/views/ProjectsView/Projects";
 import BottomNavBar from "./components/BottomnavBlock/BottomNavBar";
 import {Scrollbars} from 'react-custom-scrollbars-2';
 import {globalContext, GlobalContextProvider} from "./modal/context";
 import './App.css';
+import BlogView from "./components/views/VlogView";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 const App: React.FC = () => {
-    const {form} = useContext(globalContext)
+    const {form, scrollTop} = useContext(globalContext)
     return (
             <Scrollbars
+                autoHide
+                onUpdate={e => scrollTop.onChange && scrollTop.onChange(e.scrollTop)}
                 style={{width: '100vw', height: '100vh'}}
                 id={'display'}
             >
                 <div className="App">
                     <Header />
-                    <div>
-                        <Route exact path='/' component={HomeView}/>
-                        <Route path='/equine' component={EquineView}/>
-                        <Route path='/programming' component={ProgrammingView}/>
-                        <Route path='/project' component={ProjectsView}/>
-                        <Redirect to={'/'}/>
-                    </div>
+                    <Routes>
+                        <Route path='/' Component={HomeView}/>
+                        <Route path='/equine' Component={EquineView}/>
+                        <Route path='/programming' Component={ProgrammingView}/>
+                        <Route path='/project' Component={ProjectsView}/>
+                        <Route path='/blog' Component={BlogView}/>
+                        <Route path="*" Component={() => <Navigate to="/" replace={true} />} />
+                    </Routes>
                     {form.menu && <MenuPopup/>}
                     <BottomNavBar
                         showHeight={50}
                         customId={'display'}
                     />
-                    <AuthorBlock/>
                 </div>
             </Scrollbars>
 
